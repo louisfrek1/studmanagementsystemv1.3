@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using studmanagementsystemv1._3.Models;
+using studmanagementsystemv13.Models;
 using System.Diagnostics;
 
-namespace studmanagementsystemv1._3.Controllers
+namespace studmanagementsystemv13.Controllers
 {
     public class HomeController : Controller
     {

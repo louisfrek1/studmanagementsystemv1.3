@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace studmanagementsystemv1._3.Controllers
+namespace studmanagementsystemv13.Controllers
 {
     public class InstructorController : Controller
     {

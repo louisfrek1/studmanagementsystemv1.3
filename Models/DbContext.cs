@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
 
-namespace studmanagementsystemv1._3.Models
+namespace studmanagementsystemv13.Models
 {
     public class DbContext
     {

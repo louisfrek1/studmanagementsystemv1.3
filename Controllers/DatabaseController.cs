@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using studmanagementsystemv1._3.Models;
+using studmanagementsystemv13.Models;
 
-namespace studmanagementsystemv1._3.Controllers
+namespace studmanagementsystemv13.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

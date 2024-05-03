@@ -1,4 +1,4 @@
-namespace studmanagementsystemv1._3.Models
+namespace studmanagementsystemv13.Models
 {
     public class ErrorViewModel
     {

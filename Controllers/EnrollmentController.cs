@@ -1,38 +1,35 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using studmanagementsystemv1._3.Models;
+using studmanagementsystemv13.Models;
 
-namespace studmanagementsystemv1._3.Controllers
+public class EnrollmentController : Controller
 {
-    public class EnrollmentController : Controller
+    private readonly StudentContext _studentContext;
+
+    public EnrollmentController(StudentContext studentContext)
     {
-        public readonly StudentContext _studentContext;
+        _studentContext = studentContext;
+    }
 
-        //constructor
+    public IActionResult EnrollmentForm11()
+    {
+        return View();
+    }
 
-        public EnrollmentController(StudentContext studentContext)
+    [HttpPost]
+    public IActionResult EnrollmentForm11(Students students)
+    {
+        bool isSuccess = _studentContext.InsertStudent(students);
+
+        if (isSuccess)
         {
-            _studentContext = studentContext;
+            ViewBag.IsSuccess = true;
+            ViewBag.Message = "NAKA SAVE RA JUDDDDDDD!!";
         }
-        public IActionResult EnrollmentForm11()
+        else
         {
-            return View();
+            ViewBag.Message = "GI ATAY WALAAAAA";
         }
 
-        public IActionResult EnrollmentForm11(Students students)
-        {
-            bool isSuccess = _studentContext.InsertStudent(students);
-
-            if (isSuccess)
-            {
-                ViewBag.IsSuccess = true;
-                ViewBag.Message = "NAKA SAVE RA JUDDDDDDD!!";
-            }
-            else
-            {
-                ViewBag.Message = "GI ATAY WALAAAAA";
-            }
-
-            return View(students);
-        }
+        return View(students);
     }
 }

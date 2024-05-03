@@ -1,10 +1,10 @@
 ﻿using MySql.Data.MySqlClient;
 
-namespace studmanagementsystemv1._3.Models
+namespace studmanagementsystemv13.Models
 {
     public class StudentContext
     {
-        public readonly MySqlConnection _mySqlConnection;
+        private readonly MySqlConnection _mySqlConnection;
 
         public StudentContext(string connectionString)
         {
@@ -17,7 +17,7 @@ namespace studmanagementsystemv1._3.Models
             {
                 _mySqlConnection.Open();
                 MySqlCommand command = new MySqlCommand(
-                    
+
                     @"INSERT INTO studenttableni (studentname)
                         VALUES(@studentname)", _mySqlConnection);
                 command.Parameters.AddWithValue("@studentname", students.Name);
