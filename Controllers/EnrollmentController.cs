@@ -15,21 +15,48 @@ public class EnrollmentController : Controller
         return View();
     }
 
+    public IActionResult EnrollmentForm()
+    {
+        return View();
+    }
+
     [HttpPost]
     public IActionResult EnrollmentForm11(Students students)
     {
         bool isSuccess = _studentContext.InsertStudent(students);
 
-        if (isSuccess)
+        if (ModelState.IsValid)
         {
-            ViewBag.IsSuccess = true;
-            ViewBag.Message = "NAKA SAVE RA JUDDDDDDD!!";
-        }
-        else
-        {
-            ViewBag.Message = "GI ATAY WALAAAAA";
+            if (isSuccess)
+            {
+                TempData["SuccessMessage"] = "NAKA SAVE RA JUDDDDDDD!!";
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "GI ATAY WALAAAAA";
+            }
         }
 
-        return View(students);
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult EnrollmentForm(Students students)
+    {
+        bool isSuccess = _studentContext.InsertStudentni(students);
+
+        if (ModelState.IsValid)
+        {
+            if (isSuccess)
+            {
+                TempData["SuccessMessage"] = "NAKA SAVE RA JUDDDDDDD!!";
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "GI ATAY WALAAAAA";
+            }
+        }
+
+        return View();
     }
 }

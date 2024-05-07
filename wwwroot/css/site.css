@@ -24,7 +24,7 @@ body {
 .span-text {
     font-weight: 8;
     font-size: 12px;
-    font-family: cursive;
+    font-family: monospace;
     color: grey;
 }
 
@@ -35,7 +35,7 @@ body {
 
 .display-text {
     font-weight: 100;
-    font-family: cursive;
+    font-family: monospace;
     color: black;
 }
 
