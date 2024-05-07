@@ -3,106 +3,108 @@
 *@
 @{
 }
-<div class="container">
-    <h1>INSTRUCTOR</h1>
-    <div class="container">
-        <div class="row border">
-            <div class="col-3">
-                <h4 class="display-text">Full Name</h4>
-            </div>
-            <div class="col row">
-                <div class="col">
-                    <input type="type" name="name" value="" />
-                    <span class="span-text">LastName</span>
-                </div>
-                <div class="col">
-                    <input type="type" name="name" value="" />
-                    <span class="span-text">First Name</span>
-                </div>
-                <div class="col">
-                    <input type="type" name="name" value="" />
-                    <span class="span-text">Middle Name</span>
-                </div>
-                <div class="col">
-                    <input type="type" name="name" value="" />
-                    <span class="span-text">Suffix</span>
-                </div>
-            </div>
-        </div>
-        <div class="row border">
-            <div class="col-3">
-                <h4 class="display-text">Address</h4>
-            </div>
-            <div class="col row">
-                <div class="row">
-                    <div>
-                        <input class="input-text-size" type="type" name="name" value="" />
-                        <span class="span-text">Street Address</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <input class="input-text-size" type="type" name="name" value="" />
-                        <span class="span-text">City</span>
-                    </div>
-                    <div class="col">
-                        <input class="input-text-size" type="type" name="name" value="" />
-                        <span class="span-text">State/Province</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row border">
-            <div class="col-3">
-                <h4 class="display-text">Birth Date</h4>
-            </div>
-            <div class="col row">
-                <div class="col">
-                    <input class="input-text-size" type="type" name="name" value="" />
-                    <span class="span-text">Month</span>
-                </div>
-                <div class="col">
-                    <input class="input-text-size" type="type" name="name" value="" />
-                    <span class="span-text">Day</span>
-                </div>
-                <div class="col">
-                    <input class="input-text-size" type="type" name="name" value="" />
-                    <span class="span-text">Year</span>
-                </div>
-            </div>
-        </div>
-        <div class="row border">
-            <div class="col-3">
-                <h4 class="display-text">Gender</h4>
-            </div>
-            <div class="col row">
-                <div class="col">
-                    <input type="checkbox" />
-                    <span class="span-text">Male</span>
-                </div>
-                <div class="col">
-                    <input type="checkbox" />
-                    <span class="span-text">Female</span>
-                </div>
-                <div class="col">
-                    <input type="checkbox" />
-                    <span class="span-text">Bayut</span>
-                </div>
-            </div>
-        </div>
-        <div class="row border">
-            <div class="col-3">
-                <h4 class="display-text">Phone Number</h4>
-            </div>
-            <div class="col row">
-                <div class="row">
-                    <div>
-                        <input class="input-text-size" type="type" name="name" value="" />
-                        <span class="span-text">Phone Number</span>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-    </div>
-</div>
+<form method="post">
+    <div class="container">
+        <h1>INSTRUCTOR</h1>
+        <div class="container">
+            <div class="row border">
+                <div class="col-3">
+                    <h4 class="display-text">Full Name</h4>
+                </div>
+                <div class="col row">
+                    <div class="col">
+                        <input type="type" name="LName" value="" />
+                        <span class="span-text">Last Name</span>
+                    </div>
+                    <div class="col">
+                        <input type="type" name="FName" value="" />
+                        <span class="span-text">First Name</span>
+                    </div>
+                    <div class="col">
+                        <input type="type" name="MName" value="" />
+                        <span class="span-text">Middle Name</span>
+                    </div>
+                    <div class="col">
+                        <input type="type" name="Suffix" value="" />
+                        <span class="span-text">Suffix</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row border">
+                <div class="col-3">
+                    <h4 class="display-text">Address</h4>
+                </div>
+                <div class="col row">
+                    <div class="row">
+                        <div>
+                            <input class="input-text-size" type="type" name="Streetadd" value="" />
+                            <span class="span-text">Street Address</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input class="input-text-size" type="type" name="City" value="" />
+                            <span class="span-text">City</span>
+                        </div>
+                        <div class="col">
+                            <input class="input-text-size" type="type" name="State" value="" />
+                            <span class="span-text">State/Province</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border">
+                <div class="col-3">
+                    <h4 class="display-text">Date of Birth</h4>
+                </div>
+                <div class="col row">
+                    <div class="col">
+                        <input type="date" class="form-control border-2" name="BDate"></input>
+                        <span class="span-text">day/month/year</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row border">
+                <div class="col-3">
+                    <h4 class="display-text">Gender</h4>
+                </div>
+                <div class="col row">
+                    <div class="col">
+                        <select class="input-text-size" name="Gender">
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Vayut</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row border">
+                <div class="col-3">
+                    <h4 class="display-text">Contact Information</h4>
+                </div>
+                <div class="col row">
+                    <div class="row">
+                        <div class="col">
+                            <div>
+                                <input class="input-text-size" type="type" name="PNum" value="" />
+                                <span class="span-text">Phone Number</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <input class="input-text-size" type="type" name="EAdd" value="" />
+                                <span class="span-text">Email Address</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="row">
+            <br>
+            <button id="" type="text" class="btn btn-primary">Submit</button>
+        </div>
+</form>

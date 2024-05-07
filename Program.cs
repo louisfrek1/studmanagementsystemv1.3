@@ -30,6 +30,14 @@ builder.Services.AddTransient<CourseContext>(provider =>
     return new CourseContext(connectionString);
 });
 
+builder.Services.AddTransient<InstructorContext>(provider =>
+{
+    var configuration = provider.GetRequiredService<IConfiguration>();
+    var connectionString = configuration.GetConnectionString("DefaultConnection");
+    return new InstructorContext(connectionString);
+});
+
+
 builder.Configuration.AddJsonFile("appsettings.json");
 
 var app = builder.Build();
