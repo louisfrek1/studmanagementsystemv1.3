@@ -1,0 +1,140 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<form method="post" action="@Url.Action("UpdateEnrollmentForm", "Enrollment")">
+    <div class="container">
+        <h1>STUDENT</h1>
+        <div class="container">
+            <div class="row border">
+                <div class="col-3">
+                    <h4 class="display-text">Full Name</h4>
+                </div>
+                <div class="col row">
+                    <div class="col">
+                        <input type="type" name="LName" value="@Model.LName" />
+                        <span class="span-text">Last Name</span>
+                    </div>
+                    <div class="col">
+                        <input type="type" name="FName" value="@Model.FName" />
+                        <span class="span-text">First Name</span>
+                    </div>
+                    <div class="col">
+                        <input type="type" name="MName" value="@Model.MName" />
+                        <span class="span-text">Middle Name</span>
+                    </div>
+                    <div class="col">
+                        <input type="type" name="Suffix" value="@Model.Suffix" />
+                        <span class="span-text">Suffix</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row border">
+                <div class="col-3">
+                    <h4 class="display-text">Address</h4>
+                </div>
+                <div class="col row">
+                    <div class="row">
+                        <div>
+                            <input class="input-text-size" type="type" name="Streetadd" value="@Model.Streetadd" />
+                            <span class="span-text">Street Address</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input class="input-text-size" type="type" name="City" value="@Model.City" />
+                            <span class="span-text">City</span>
+                        </div>
+                        <div class="col">
+                            <input class="input-text-size" type="type" name="State" value="@Model.State" />
+                            <span class="span-text">State/Province</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border">
+                <div class="col-3">
+                    <h4 class="display-text">Date of Birth</h4>
+                </div>
+                <div class="col row">
+                    <div class="col">
+                        <input type="date" class="form-control border-2" name="BDate" value="@Model.BDate"></input>
+                        <span class="span-text">day/month/year</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row border">
+                <div class="col-3">
+                    <h4 class="display-text">Gender</h4>
+                </div>
+                <div class="col row">
+                    <div class="col">
+                        <select class="input-text-size" name="Gender" value="@Model.Gender">
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Vayut</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row border">
+                <div class="col-3">
+                    <h4 class="display-text">Contact Information</h4>
+                </div>
+                <div class="col row">
+                    <div class="row">
+                        <div class="col">
+                            <div>
+                                <input class="input-text-size" type="type" name="PNum" value="@Model.PNum" />
+                                <span class="span-text">Phone Number</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <input class="input-text-size" type="type" name="EAdd" value="@Model.EAdd" />
+                                <span class="span-text">Email Address</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border">
+                <div class="col-3">
+                    <h4 class="display-text">Year Level</h4>
+                </div>
+                <div class="col row">
+                    <div class="row">
+                        <div class="col">
+                            <select class="input-text-size" name="YLevel" value="@Model.YLevel">
+                                <option>1st Year</option>
+                                <option>2nd Year</option>
+                                <option>3rd Year</option>
+                                <option>4th Year</option>
+                                <option>5th Year</option>
+                            </select>
+                            <span class="span-text">Year Level</span>
+                        </div>
+                        <div class="col">
+                            <select class="input-text-size" name="Degree" value="@Model.Degree">
+                                <option>BSCPe</option>
+                                <option>AMBOT</option>
+                                <option>AMBOT2</option>
+                                <option>AMBOT3</option>
+                                <option>AMBOT4</option>
+                            </select>
+                            <span class="span-text">Degree</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <br>
+            <button id="" type="text" class="btn btn-primary">Update</button>
+        </div>
+</form>

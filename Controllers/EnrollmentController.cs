@@ -59,4 +59,20 @@ public class EnrollmentController : Controller
 
         return View();
     }
+
+    [HttpGet]
+
+    public IActionResult UpdateEnrollmentForm(int id)
+    {
+        var student = _studentContext.GetStudentById(id);
+        return View(student);
+    }
+
+    public IActionResult StudentTableForm()
+    {
+        var students = _studentContext.GetStudents();
+        return View(students);
+
+    }
+
 }

@@ -36,7 +36,12 @@ namespace studmanagementsystemv13.Controllers
 
             return View();
         }
+
+        public IActionResult CourseTable()
+        {
+            return View();
+
+        }
     }
 
-    
 }

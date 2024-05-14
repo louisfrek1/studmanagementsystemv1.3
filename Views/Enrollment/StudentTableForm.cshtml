@@ -1,0 +1,79 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Last Name
+                </th>
+                <th>
+                    First Name
+                </th>
+                <th>
+                    Middle Name
+                </th>
+                <th>
+                    Suffix
+                </th>
+                <th>
+                    Gender
+                </th>
+                <th>
+                    Year Level
+                </th>
+                <th>
+                    Degree
+                </th>
+                <th>
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td>
+                        @student.ID
+                    </td>
+                    <td>
+                        @student.LName
+                    </td>
+                    <td>
+                        @student.FName
+                    </td>
+                    <td>
+                        @student.MName
+                    </td>
+                    <td>
+                        @student.Suffix
+                    </td>
+                    <td>
+                        @student.Gender
+                    </td>
+                    <td>
+                        @student.YLevel
+                    </td>
+                    <td>
+                        @student.Degree
+                    </td>
+                    <td>
+                        <form method="get" action="@Url.Action("UpdateEnrollmentForm", "Enrollment", new { id = student.ID})">
+                            <button type="submit" class="btn btn-primary">UPDATE</button>
+                        </form>
+                        <button type="submit" class="btn btn-danger">DELETE</button>
+                    </td>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

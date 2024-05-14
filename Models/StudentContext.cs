@@ -70,5 +70,69 @@ namespace studmanagementsystemv13.Models
                 return false;
             }
         }
+
+        public List<Students> GetStudents()
+        {
+            List<Students> studentList = new List<Students>();
+
+            _mySqlConnection.Open();
+            MySqlCommand command = new MySqlCommand(
+                "SELECT * FROM studentni", _mySqlConnection);
+
+            using (MySqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    studentList.Add(new Students
+                    {
+                        ID = reader.GetInt32("id_stud"),
+                        LName = reader.GetString("lname"),
+                        FName = reader.GetString("fname"),
+                        MName = reader.GetString("mname"),
+                        Suffix = reader.GetString("suffix"),
+                        Gender = reader.GetString("gender"),
+                        YLevel = reader.GetString("ylevel"),
+                        Degree = reader.GetString("degree")
+                    });
+                }
+            }
+            return studentList;
+        }
+
+        public Students GetStudentById(int id)
+        {
+            Students student = null;
+
+            _mySqlConnection.Open();
+            MySqlCommand command = new MySqlCommand("SELECT * FROM studentni WHERE id_stud = @id", _mySqlConnection);
+            command.Parameters.AddWithValue("@id", id);
+
+            using (MySqlDataReader reader = command.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    student = new Students
+                    {
+                        ID = reader.GetInt32("id_stud"),
+                        LName = reader.GetString("lname"),
+                        FName = reader.GetString("fname"),
+                        MName = reader.GetString("mname"),
+                        Suffix = reader.GetString("suffix"),
+                        Streetadd = reader.GetString("streetadd"),
+                        City = reader.GetString("city"),
+                        State = reader.GetString("state"),
+                        BDate = reader.GetDateTime("bdate"),
+                        Gender = reader.GetString("gender"),
+                        PNum = reader.GetInt32("pnumber"),
+                        EAdd = reader.GetString("email"),
+                        YLevel = reader.GetString("ylevel"),
+                        Degree = reader.GetString("degree")
+                    };
+
+                }
+            }
+
+            return student;
+        }
     }
 }
